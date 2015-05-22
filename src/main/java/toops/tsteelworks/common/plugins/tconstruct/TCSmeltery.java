@@ -124,7 +124,7 @@ class TCSmeltery {
 			if (isOre) {
 				// TConstruct registry stores the double output directly in the fluid amount, we compute it right
 				// before outputing it to the high oven, so divide to get back to a neutral value.
-				output.amount /= 2;
+				output.amount = TSRecipes.INGOT_LIQUID_VALUE;
 			}
 
 			localRegistry.addMeltable(key, isOre, output, temp);
